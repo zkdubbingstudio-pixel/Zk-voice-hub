@@ -8,10 +8,12 @@ export interface UserSettings {
 
 export interface User {
   uid: string;
+  id?: string;
   email: string;
   displayName: string;
   photoURL: string;
   role: 'user' | 'admin';
+  isBanned?: boolean;
   createdAt: number;
   settings?: UserSettings;
 }
